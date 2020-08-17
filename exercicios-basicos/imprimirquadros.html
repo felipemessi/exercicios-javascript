@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mod 2 - Ex 1</title>
+    <div class="app">
+
+    </div>
+</head>
+<body>
+    <script>
+        // Imprime quadrados vermelhos de 100px na tela.
+        var divElement = document.querySelector('.app')
+
+        var buttonElement = document.createElement('button')
+        buttonElement.innerHTML = "Botão Criar quadrado"
+        divElement.appendChild(buttonElement)
+
+        buttonElement.onclick =  function (){
+            var quadrado = document.createElement('div')
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = '#f00';
+
+            quadrado.classList.add('box')
+
+            divElement.appendChild(quadrado)
+        }
+        
+    </script>
+</body>
+</html>

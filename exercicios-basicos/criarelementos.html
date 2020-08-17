@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mod2 Ex3</title>
+</head>
+<body>
+    <div class="app">
+        <ul class="name">
+
+        </ul>
+    </div>
+
+    <script>
+        // Renderiza uma lista de nomes em tela.
+
+        var nomes = [
+            'Felipe', 
+            'Júlio', 
+            'Gabriel', 
+            'Pedro'
+        ]
+        
+        var listElement = document.querySelector('ul.name')
+
+        function renderizarNomes(nomes) {
+            listElement.innerHTML = ''
+            for (nome of nomes) {
+                var nameElement = document.createElement('li')
+                var nameText = document.createTextNode(nome)
+
+                nameElement.appendChild(nameText)
+                listElement.appendChild(nameElement)
+            }
+        }
+        
+        renderizarNomes(nomes)
+        
+        var inputElement = document.createElement('input')
+        inputElement.setAttribute('type', 'text');
+        inputElement.setAttribute('name', 'nome');
+
+        var buttonElement = document.createElement('button')
+        buttonElement.setAttribute('class', 'btn');
+        var buttonText = document.createTextNode('Adicionar Nome')
+        buttonElement.appendChild(buttonText)
+
+        var divElement = document.querySelector('div.app')
+
+        divElement.appendChild(inputElement)
+        divElement.appendChild(buttonElement)
+
+        buttonElement.onclick = function () {
+            var inputValue = document.querySelector('input')
+            nomes.push(inputValue.value)
+            inputValue.value = ""
+            console.log(nomes)
+            renderizarNomes(nomes)
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mod 2 - Ex 2</title>
+    <div class="app">
+
+    </div>
+</head>
+<body>
+    <script>
+        // Crie um botão que gere quadrados vermelhos na tela
+        // quando passar o mouse em cima de cada quadrado ele 
+        // troca a cor para uma cor aleatória
+        
+        var divElement = document.querySelector('.app')
+
+        var buttonElement = document.createElement('button')
+        buttonElement.innerHTML = "Botão Criar quadrado"
+        divElement.appendChild(buttonElement)
+
+        buttonElement.onclick =  function (){
+            var quadrado = document.createElement('div')
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = '#f00';
+
+            quadrado.onmouseover =  function(){
+                var newColor = getRandomColor();
+                quadrado.style.backgroundColor = newColor
+            }
+
+            divElement.appendChild(quadrado)
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

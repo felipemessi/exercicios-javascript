@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crie uma rotina que diz se uma pessoa é Iniciante, Intermediário, 
+        // Avançado ou Master de acordo com a quantidade de anos de estudo.
+        function experiencia(anos) {
+            if (anos >= 0 && anos <=1) {
+                console.log('Iniciante')
+            }else if (anos > 1 && anos <=3) {
+                console.log('Intermediário')
+            }else if (anos > 3 && anos <=6) {
+                console.log('Avançado')
+            }else{
+                console.log('Master')
+            }
+        }
+        var anosEstudo = 6
+        experiencia(anosEstudo)
+    </script>
+</body>
+</html>

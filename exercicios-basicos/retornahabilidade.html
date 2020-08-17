@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mod 1 - Ex 3</title>
+</head>
+<body>
+    <script>
+        // Crie uma rotina que retorna se existe ou não determinada
+        // habilidade dentr ode um array de habilidades.
+        function temHabilidade(skills) {
+            for (skill in skills) {
+                if (skills[skill] == 'Javascript') {
+                    return (console.log(true))
+                }
+            }
+            return (console.log(false))
+        }
+
+        var skills = ["Javascript", "ReactJS", "ReactNative"]
+        temHabilidade(skills)
+    </script>
+</body>
+</html>

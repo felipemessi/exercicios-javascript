@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Imprime na tela o nome e habilidade de todos usuários de um array.
+
+        var usuarios = [
+            {
+                nome: "Felipe",
+                habilidades: ["Javascript", "ReactJS", "ReactNative"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ]
+
+        function reproduza(users) {
+            for (user of users) {
+                console.log("O " + user.nome + " possui as habilidades: "
+                + user.habilidades.join(", ") + ".")
+            }
+        }
+
+        reproduza(usuarios)
+    </script>
+</body>
+</html>
