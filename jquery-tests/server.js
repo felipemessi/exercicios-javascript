@@ -15,12 +15,12 @@ app.get('/create-user/', (request, response) => {
 })
 
 app.post('/create-user/', (request, response) => {
-    const { cpf, birthday_year, city, uf, sexo } = request.body
-    
-    const project = { cpf, birthday_year, city, uf, sexo } 
+    const { cpf, ano_nascimento, cidade, uf, sexo }  = request.body
+
+    const project = { cpf, ano_nascimento, cidade, uf, sexo } 
+    console.log(project)
 
     projects.push(project)
-
 
     return response.json(project)
 })
